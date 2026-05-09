@@ -33,6 +33,10 @@ LangGraph is an extension of LangChain designed for building stateful, multi-act
 *   **`MemorySaver`**: An in-memory checkpointer that saves graph state. Crucial for giving bots memory and for implementing Human-in-the-Loop workflows.
     *   [Persistence API Spec](https://langchain-ai.github.io/langgraph/concepts/persistence/)
 *   **`add_messages`**: A LangGraph reducer function used in the `State` class. Instead of overwriting the messages list during a node update, it ensures new messages are intelligently appended to the conversation history.
+*   **Human-in-the-Loop (`interrupt_before`)**: A compile-time argument that instructs the graph to pause execution before specific nodes. Used in tandem with `app.update_state()` to allow human managers to modify state before resuming execution.
+    *   [HITL API Concepts](https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)
+*   **Tool Calling (`@tool` & `ToolNode`)**: Allows the LLM to trigger external Python functions. You bind tools to an LLM (`llm.bind_tools`), and LangGraph's pre-built `ToolNode` automatically executes the function requested by the LLM's `tool_calls` output.
+    *   [Tool Calling Docs](https://python.langchain.com/v0.2/docs/concepts/#functiontool-calling)
 
 ### Langfuse SDK
 Langfuse is an open-source observability platform for LLMs.
@@ -49,6 +53,8 @@ Langfuse is an open-source observability platform for LLMs.
 - `practical_customer_bot.py`: A practical implementation of a Customer Service Chatbot. Demonstrates advanced routing by categorizing user intent and routing the conversation to specialized agent nodes.
 - `phase3_langfuse_tracing.py`: Integrates the Langfuse `CallbackHandler` into the Customer Service Bot to trace and monitor token usage, latency, and routing decisions.
 - `phase4_memory_agent.py`: Demonstrates how to give agents stateful memory using LangGraph checkpointers (`MemorySaver`). Shows how to persist conversational history across multiple invocations using `thread_id`.
+- `phase5_human_in_the_loop.py`: Demonstrates how to pause an AI agent before a sensitive action (like processing a refund), allowing a human to review and authorize the action by manually modifying the graph state.
+- `phase6_tool_calling.py`: Demonstrates how to give the LLM access to external APIs using the `@tool` decorator, `bind_tools`, and LangGraph's pre-built `ToolNode` and conditional routers.
 
 ## Setup
 1. Create a virtual environment: `python -m venv venv`

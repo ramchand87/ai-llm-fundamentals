@@ -39,15 +39,15 @@ This document tracks our progress in mastering the LangChain ecosystem, focusing
 
 ## 🚀 Unexplored / Upcoming Milestones
 
-- [ ] **Phase 5: Human-in-the-Loop (HITL)**
-  - [ ] Use `interrupt_before` to pause graph execution
-  - [ ] Allow a human manager to approve or reject actions (e.g., processing refunds)
-  - [ ] Manually update the graph's internal state before resuming execution
+- [x] **Phase 5: Human-in-the-Loop (HITL)**
+  - [x] Use `interrupt_before` to pause graph execution
+  - [x] Allow a human manager to approve or reject actions (e.g., processing refunds)
+  - [x] Manually update the graph's internal state before resuming execution
 
-- [ ] **Phase 6: Tool Calling (Function Calling)**
-  - [ ] Bind external Python tools to the LLM (e.g., web searching, API calling)
-  - [ ] Create a `ToolNode` in LangGraph to execute the functions chosen by the LLM
-  - [ ] Handle ToolMessages and feed results back to the agent
+- [x] **Phase 6: Tool Calling (Function Calling)**
+  - [x] Bind external Python tools to the LLM (e.g., web searching, API calling)
+  - [x] Create a `ToolNode` in LangGraph to execute the functions chosen by the LLM
+  - [x] Handle ToolMessages and feed results back to the agent
 
 - [ ] **Phase 7: Multi-Agent Systems**
   - [ ] Understand the "Supervisor" architectural pattern
