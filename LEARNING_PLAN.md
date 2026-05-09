@@ -49,14 +49,14 @@ This document tracks our progress in mastering the LangChain ecosystem, focusing
   - [x] Create a `ToolNode` in LangGraph to execute the functions chosen by the LLM
   - [x] Handle ToolMessages and feed results back to the agent
 
-- [ ] **Phase 7: Multi-Agent Systems**
-  - [ ] Understand the "Supervisor" architectural pattern
-  - [ ] Create specialized sub-agents (e.g., a "Researcher" and a "Coder")
-  - [ ] Build a Supervisor node that delegates tasks to sub-agents and synthesizes the final answer
+- [x] **Phase 7: Multi-Agent Systems**
+  - [x] Understand the "Supervisor" architectural pattern
+  - [x] Create specialized sub-agents (e.g., a "Researcher" and a "Coder")
+  - [x] Build a Supervisor node that delegates tasks to sub-agents and synthesizes the final answer
 
-- [ ] **Phase 8: RAG (Retrieval-Augmented Generation)**
-  - [ ] Connect the agent to a Vector Database
-  - [ ] Build a workflow that routes unknown queries to a retrieval node before answering
+- [x] **Phase 8: RAG (Retrieval-Augmented Generation)**
+  - [x] Connect the agent to a Vector Database
+  - [x] Build a workflow that routes unknown queries to a retrieval node before answering
 
 - [ ] **Phase 9: Streaming & Production**
   - [ ] Implement token-by-token streaming for a responsive UI

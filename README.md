@@ -37,6 +37,9 @@ LangGraph is an extension of LangChain designed for building stateful, multi-act
     *   [HITL API Concepts](https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)
 *   **Tool Calling (`@tool` & `ToolNode`)**: Allows the LLM to trigger external Python functions. You bind tools to an LLM (`llm.bind_tools`), and LangGraph's pre-built `ToolNode` automatically executes the function requested by the LLM's `tool_calls` output.
     *   [Tool Calling Docs](https://python.langchain.com/v0.2/docs/concepts/#functiontool-calling)
+*   **Structured Output (`with_structured_output`)**: A powerful method to force an LLM to respond with a strict JSON format matching a Pydantic schema. Essential for the Supervisor multi-agent pattern!
+    *   [Structured Output Docs](https://python.langchain.com/v0.2/docs/how_to/structured_output/)
+*   **RAG (Retrieval-Augmented Generation)**: The architecture of fetching internal company data from a Vector Database and injecting it into the LLM's system prompt before generation.
 
 ### Langfuse SDK
 Langfuse is an open-source observability platform for LLMs.
@@ -55,6 +58,8 @@ Langfuse is an open-source observability platform for LLMs.
 - `phase4_memory_agent.py`: Demonstrates how to give agents stateful memory using LangGraph checkpointers (`MemorySaver`). Shows how to persist conversational history across multiple invocations using `thread_id`.
 - `phase5_human_in_the_loop.py`: Demonstrates how to pause an AI agent before a sensitive action (like processing a refund), allowing a human to review and authorize the action by manually modifying the graph state.
 - `phase6_tool_calling.py`: Demonstrates how to give the LLM access to external APIs using the `@tool` decorator, `bind_tools`, and LangGraph's pre-built `ToolNode` and conditional routers.
+- `phase7_multi_agent.py`: Introduces the Supervisor architecture! A central LLM manager routes tasks to specialized worker nodes (`Researcher` and `Coder`) using strict structured output.
+- `phase8_rag_agent.py`: Demonstrates a Retrieval-Augmented Generation workflow where a router decides if external context is needed, queries a mock vector database, and augments the LLM's prompt.
 
 ## Setup
 1. Create a virtual environment: `python -m venv venv`
