@@ -1,0 +1,63 @@
+# Mastering LangGraph & LangChain: Learning Plan
+
+This document tracks our progress in mastering the LangChain ecosystem, focusing on Agentic workflows.
+
+## ✅ Completed Milestones
+
+- [x] **Workspace Setup**
+  - [x] Initialize Python virtual environment
+  - [x] Configure `.env` file for secrets management
+  - [x] Set up Git version control and remote repository
+
+- [x] **Phase 1: LangChain Foundations**
+  - [x] Connect local LLMs (`ChatOllama` with `llama3`)
+  - [x] Utilize `ChatPromptTemplate` for dynamic instructions
+  - [x] Master LangChain Expression Language (LCEL) syntax (`prompt | llm`)
+
+- [x] **Phase 2: Introduction to LangGraph**
+  - [x] Understand `StateGraph` and strongly-typed Agent State (`TypedDict`)
+  - [x] Build simple sequential workflows with Nodes and Edges
+  - [x] Use `START` and `END` virtual nodes
+  - [x] Compile graphs into executable runnables
+
+- [x] **Phase 2.5: Advanced Graph Routing**
+  - [x] Build a multi-node Customer Service Chatbot
+  - [x] Implement dynamic routing using `add_conditional_edges`
+  - [x] Create an intent categorizer node to direct traffic
+
+- [x] **Phase 3: Observability & Tracing**
+  - [x] Create a Langfuse Cloud project
+  - [x] Integrate `CallbackHandler` into LangGraph configurations
+  - [x] Monitor token usage, latency, and LLM generation outputs
+
+- [x] **Phase 4: Agent Memory & Checkpointing**
+  - [x] Implement `MemorySaver` checkpointers
+  - [x] Use the `add_messages` reducer to safely append conversation history
+  - [x] Persist conversational memory across invocations using `thread_id`
+
+---
+
+## 🚀 Unexplored / Upcoming Milestones
+
+- [ ] **Phase 5: Human-in-the-Loop (HITL)**
+  - [ ] Use `interrupt_before` to pause graph execution
+  - [ ] Allow a human manager to approve or reject actions (e.g., processing refunds)
+  - [ ] Manually update the graph's internal state before resuming execution
+
+- [ ] **Phase 6: Tool Calling (Function Calling)**
+  - [ ] Bind external Python tools to the LLM (e.g., web searching, API calling)
+  - [ ] Create a `ToolNode` in LangGraph to execute the functions chosen by the LLM
+  - [ ] Handle ToolMessages and feed results back to the agent
+
+- [ ] **Phase 7: Multi-Agent Systems**
+  - [ ] Understand the "Supervisor" architectural pattern
+  - [ ] Create specialized sub-agents (e.g., a "Researcher" and a "Coder")
+  - [ ] Build a Supervisor node that delegates tasks to sub-agents and synthesizes the final answer
+
+- [ ] **Phase 8: RAG (Retrieval-Augmented Generation)**
+  - [ ] Connect the agent to a Vector Database
+  - [ ] Build a workflow that routes unknown queries to a retrieval node before answering
+
+- [ ] **Phase 9: Streaming & Production**
+  - [ ] Implement token-by-token streaming for a responsive UI
+  - [ ] Stream graph events (e.g., knowing when the graph switches from Node A to Node B)
