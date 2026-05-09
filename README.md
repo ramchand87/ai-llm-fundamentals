@@ -62,6 +62,7 @@ Langfuse is an open-source observability platform for LLMs.
 - `phase7_multi_agent.py`: Introduces the Supervisor architecture! A central LLM manager routes tasks to specialized worker nodes (`Researcher` and `Coder`) using strict structured output.
 - `phase8_rag_agent.py`: Demonstrates a Retrieval-Augmented Generation workflow where a router decides if external context is needed, queries a mock vector database, and augments the LLM's prompt.
 - `phase9_streaming.py`: Demonstrates how to use LangGraph's `.stream()` method to get real-time node execution events and token-by-token LLM output.
+- `phase10_skills_agent.py`: Demonstrates giving an agent a tool to dynamically read a `skills.md` file to learn repository-specific coding standards and business SOPs before generating an answer.
 
 ## Setup
 1. Create a virtual environment: `python -m venv venv`

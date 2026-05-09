@@ -61,3 +61,8 @@ This document tracks our progress in mastering the LangChain ecosystem, focusing
 - [x] **Phase 9: Streaming & Production**
   - [x] Implement token-by-token streaming for a responsive UI
   - [x] Stream graph events (e.g., knowing when the graph switches from Node A to Node B)
+
+- [x] **Phase 10: AI Agent Skills & SOPs**
+  - [x] Understand how `skills.md` files act as a Knowledge Base
+  - [x] Give agents tools to dynamically read coding standards and business rules
+  - [x] Enforce standard operating procedures before task execution
