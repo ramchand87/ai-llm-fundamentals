@@ -30,6 +30,9 @@ LangGraph is an extension of LangChain designed for building stateful, multi-act
 *   **`START` / `END`**: Special virtual nodes provided by the SDK to define the entry and exit points of the graph.
 *   **`compile()`**: The method called on the `StateGraph` builder to lock the graph definition and return an executable `CompiledGraph` (Runnable).
     *   [Graph API Concepts](https://langchain-ai.github.io/langgraph/concepts/low_level/)
+*   **`MemorySaver`**: An in-memory checkpointer that saves graph state. Crucial for giving bots memory and for implementing Human-in-the-Loop workflows.
+    *   [Persistence API Spec](https://langchain-ai.github.io/langgraph/concepts/persistence/)
+*   **`add_messages`**: A LangGraph reducer function used in the `State` class. Instead of overwriting the messages list during a node update, it ensures new messages are intelligently appended to the conversation history.
 
 ### Langfuse SDK
 Langfuse is an open-source observability platform for LLMs.
@@ -45,6 +48,7 @@ Langfuse is an open-source observability platform for LLMs.
 - `phase2_langgraph_intro.py`: Introduces the `StateGraph`. Shows how to define state, create simple nodes, and route between them in a loop.
 - `practical_customer_bot.py`: A practical implementation of a Customer Service Chatbot. Demonstrates advanced routing by categorizing user intent and routing the conversation to specialized agent nodes.
 - `phase3_langfuse_tracing.py`: Integrates the Langfuse `CallbackHandler` into the Customer Service Bot to trace and monitor token usage, latency, and routing decisions.
+- `phase4_memory_agent.py`: Demonstrates how to give agents stateful memory using LangGraph checkpointers (`MemorySaver`). Shows how to persist conversational history across multiple invocations using `thread_id`.
 
 ## Setup
 1. Create a virtual environment: `python -m venv venv`
