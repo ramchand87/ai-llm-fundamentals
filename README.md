@@ -64,6 +64,14 @@ Langfuse is an open-source observability platform for LLMs.
 - `phase9_streaming.py`: Demonstrates how to use LangGraph's `.stream()` method to get real-time node execution events and token-by-token LLM output.
 - `phase10_skills_agent.py`: Demonstrates giving an agent a tool to dynamically read a `skills.md` file to learn repository-specific coding standards and business SOPs before generating an answer.
 
+## Documentation & Learning Plans
+
+This repository includes several markdown files that guide the learning journey and document architectural decisions:
+- [`LEARNING_PLAN.md`](LEARNING_PLAN.md): The core curriculum covering Phases 1 through 10.
+- [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md): A non-technical overview of Agentic AI concepts (Workflows, Memory, HITL, RAG) using simple real-world analogies, designed for business leaders and stakeholders.
+- [`ADVANCED_LEARNING_PLAN.md`](ADVANCED_LEARNING_PLAN.md): A roadmap for future exploration into production deployment, peer-to-peer agent protocols, advanced RAG, and Generative UI.
+- [`AWS_MIGRATION_PLAN.md`](AWS_MIGRATION_PLAN.md): A theoretical migration strategy outlining how to move this local architecture to AWS Bedrock or Amazon Bedrock Agents.
+
 ## Setup
 1. Create a virtual environment: `python -m venv venv`
 2. Activate it: `.\venv\Scripts\Activate.ps1`
