@@ -58,6 +58,6 @@ This document tracks our progress in mastering the LangChain ecosystem, focusing
   - [x] Connect the agent to a Vector Database
   - [x] Build a workflow that routes unknown queries to a retrieval node before answering
 
-- [ ] **Phase 9: Streaming & Production**
-  - [ ] Implement token-by-token streaming for a responsive UI
-  - [ ] Stream graph events (e.g., knowing when the graph switches from Node A to Node B)
+- [x] **Phase 9: Streaming & Production**
+  - [x] Implement token-by-token streaming for a responsive UI
+  - [x] Stream graph events (e.g., knowing when the graph switches from Node A to Node B)

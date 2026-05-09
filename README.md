@@ -40,6 +40,7 @@ LangGraph is an extension of LangChain designed for building stateful, multi-act
 *   **Structured Output (`with_structured_output`)**: A powerful method to force an LLM to respond with a strict JSON format matching a Pydantic schema. Essential for the Supervisor multi-agent pattern!
     *   [Structured Output Docs](https://python.langchain.com/v0.2/docs/how_to/structured_output/)
 *   **RAG (Retrieval-Augmented Generation)**: The architecture of fetching internal company data from a Vector Database and injecting it into the LLM's system prompt before generation.
+*   **Streaming (`app.stream`)**: LangGraph supports multiple streaming modes. `stream_mode="updates"` yields state changes as nodes complete, while `stream_mode="messages"` streams individual tokens directly from the LLM for real-time UI updates.
 
 ### Langfuse SDK
 Langfuse is an open-source observability platform for LLMs.
@@ -60,6 +61,7 @@ Langfuse is an open-source observability platform for LLMs.
 - `phase6_tool_calling.py`: Demonstrates how to give the LLM access to external APIs using the `@tool` decorator, `bind_tools`, and LangGraph's pre-built `ToolNode` and conditional routers.
 - `phase7_multi_agent.py`: Introduces the Supervisor architecture! A central LLM manager routes tasks to specialized worker nodes (`Researcher` and `Coder`) using strict structured output.
 - `phase8_rag_agent.py`: Demonstrates a Retrieval-Augmented Generation workflow where a router decides if external context is needed, queries a mock vector database, and augments the LLM's prompt.
+- `phase9_streaming.py`: Demonstrates how to use LangGraph's `.stream()` method to get real-time node execution events and token-by-token LLM output.
 
 ## Setup
 1. Create a virtual environment: `python -m venv venv`
